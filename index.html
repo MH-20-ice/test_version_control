@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithemetic Operation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div>
+        <h2>Arithemetic Operation</h2><hr/>
+        
+       <input type="number" placeholder="first number" id="num1" />
+        <br />
+       <input type="number" placeholder="second number" id="num2" />
+        <br />
+       <input type="number" readonly id="result" placeholder="Result" />
+        <br>
+        <button id="add">Add</button>
+        <button id="sub">Subtract</button>
+        <button id="mul">Multiply</button>
+        <button id="div">Division</button><br>
+        <button onclick="clearField()">Reset</button>
+    </div>
+
+
+    <script type="text/javascript">
+        var n1=document.getElementById("num1");
+        var n2=document.getElementById("num2");
+        var res=document.getElementById("result");
+
+        document.getElementById("add").addEventListener("click",function(){ res.value=parseInt(n1.value)+parseInt(n2.value);});
+        document.getElementById("sub").addEventListener("click",function(){ res.value=parseInt(n1.value)-parseInt(n2.value);});
+        document.getElementById("mul").addEventListener("click",function(){ res.value=parseInt(n1.value)*parseInt(n2.value);});
+        
+        document.getElementById("div").addEventListener("click",function(){res.value=parseInt(n1.value)/parseInt(n2.value);});
+        function clearField()
+        {
+            document.getElementById('num1').value='';
+            document.getElementById('num2').value='';
+            document.getElementById('result').value='';
+        }
+
+        
+       
+        
+    </script>
+    
+</body>
+</html>
